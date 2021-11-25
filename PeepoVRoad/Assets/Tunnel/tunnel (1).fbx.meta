@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: eeed805fe658948479a229eaa4e50aef
+guid: 93941983ecf706044a190fb88659e3af
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EndTunnelMat
+    second: {fileID: 2100000, guid: 824bdf1052caedb41af0e31cb2d6159c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TunnelMat
+    second: {fileID: 2100000, guid: 719275fe7d3f68a49851ef095ffca8d6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
