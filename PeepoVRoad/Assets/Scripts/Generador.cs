@@ -19,6 +19,8 @@ public class Generador : MonoBehaviour
         int repeatRate = Random.Range(2,range);
         if (go.tag == "Untagged")
             go.tag = "coche";
+        if (go.tag == "barca")
+            go.tag = "Floor";
         Invoke("spawn", repeatRate);
        // Debug.Log(repeatRate);
     }

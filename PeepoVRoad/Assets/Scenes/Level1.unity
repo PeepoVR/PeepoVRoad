@@ -4651,6 +4651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 560785779405225602, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_TagString
+      value: barca
+      objectReference: {fileID: 0}
     - target: {fileID: 2444443142674658608, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
       propertyPath: m_Name
       value: River1
@@ -4699,6 +4703,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3572223570050223249, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572223570050223249, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 3860226684625400817, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
       propertyPath: m_LocalScale.x
       value: 135.57
@@ -4706,6 +4718,30 @@ PrefabInstance:
     - target: {fileID: 3860226686047099403, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
       propertyPath: m_LocalScale.x
       value: 135.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001402881402513316, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001402881402513316, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054850929026522007, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_TagString
+      value: barca
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105681064744921476, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.900003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105681064744921476, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301212411542263223, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_TagString
+      value: barca
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
