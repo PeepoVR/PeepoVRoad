@@ -65,6 +65,9 @@ public class CarDriving : MonoBehaviour {
 	public float maxTurnDegrees = 20;
 	public float maxSpeed = 30;
 	
+	public Transform steeringWheel;
+	public int maxSteeringWheetRot_visual = 80;
+	
 	private float shaftsDist;
 	private SpeedControls speedControls;
 	private float speed = 0;
@@ -125,6 +128,8 @@ public class CarDriving : MonoBehaviour {
 		this.speed += accelConfig.GetAcelerationForSpeed(this.speed) * accelMultiplier * Time.deltaTime;
 		if (this.speed < 0.0001)
 			this.speed = 0;
+		
+		UpdateEfects();
 	}
 	
 	private Vector2 vector3to2D(Vector3 vect) {
@@ -134,5 +139,12 @@ public class CarDriving : MonoBehaviour {
 	void OnCollisionStay(Collision collision) {
 		if (! collision.gameObject.CompareTag("Floor"))
 			this.speed = Math.Min(this.speed, 10);
+	}
+	
+	private void UpdateEfects() {
+		if (this.steeringWheel != null) {
+			Vector3 rot = this.steeringWheel.localEulerAngles;
+			this.steeringWheel.localEulerAngles = new Vector3(rot.x, rot.y, Input.GetAxis("Horizontal") * this.maxSteeringWheetRot_visual);
+		}
 	}
 }
