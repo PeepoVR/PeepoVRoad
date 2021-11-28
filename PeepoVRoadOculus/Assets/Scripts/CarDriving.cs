@@ -71,17 +71,12 @@ public class CarDriving : MonoBehaviour {
 	private float shaftsDist;
 	private SpeedControls speedControls;
 	private float speed = 0;
-	private String c ;
 	
 	void Start() {
-		bool connectedController = true;
-		this.speedControls = new KeyboardControls();
+		bool connectedController = Input.GetJoystickNames().Length != 0 && Input.GetJoystickNames()[0].Length != 0;
+		this.speedControls = connectedController ? (SpeedControls) new GanmePadControls() : (SpeedControls) new KeyboardControls();
 		this.shaftsDist = Vector2.Distance(vector3to2D(this.frontShaft.position), vector3to2D(transform.position));
 		
-	
-		c = connectedController + "";
-		Debug.Log(connectedController);
-
 		this.throttleAccels = new AcceletarionConfig(new float[4, 2] {
 			{this.maxSpeed / 6f, 5}, //1s
 			{this.maxSpeed * (5f / 6f), 6.67f}, //3s
@@ -100,8 +95,6 @@ public class CarDriving : MonoBehaviour {
 		});
 	}
 	
-	public TextMesh txt;
-
 	void Update() {
 		if (this.speed != 0) {
 			float rotTime = this.shaftsDist / this.speed;
@@ -112,8 +105,7 @@ public class CarDriving : MonoBehaviour {
 		this.speedControls.UpdateCurrentSpeedInput();
 		float accelMultiplier = 1;
 		AcceletarionConfig accelConfig;
-
-
+		
 		if (this.speedControls.Brake != 0) {
 			accelConfig = this.brakeAccels;
 			accelMultiplier = this.speedControls.Brake;
@@ -137,8 +129,6 @@ public class CarDriving : MonoBehaviour {
 		if (this.speed < 0.0001)
 			this.speed = 0;
 		
-		txt.text = this.speedControls.Brake + " " + this.speedControls.Throttle + " " + speed;
-
 		UpdateEfects();
 	}
 	

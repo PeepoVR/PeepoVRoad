@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WayPointCharacter : MonoBehaviour
 {
     public Transform target;
     public float speed = 1.0f;
     // Start is called before the first frame update
-    float gravity = -9.81f;
     private Vector3 velocity;
   
     void Start()
@@ -19,21 +19,30 @@ public class WayPointCharacter : MonoBehaviour
     {
         
         Vector3 relativePos = target.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up * Time.deltaTime);
-        transform.rotation = rotation;
+        if(gameObject.tag == "coche"){
+            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up * Time.deltaTime);
+            transform.rotation = rotation;
+            if (relativePos.x <= 0)
+                transform.Translate(transform.right * speed * Time.deltaTime);
+            else 
+                transform.Translate(-transform.right * speed * Time.deltaTime);
+        }
 
-        transform.Translate(transform.right * speed * Time.deltaTime);
-        //velocity.y += gravity * Time.deltaTime;
-        //transform.Translate(velocity * Time.deltaTime);
+        else if(gameObject.tag == "Floor"){
+             if (relativePos.x >= 0)
+                transform.Translate(transform.right * speed * Time.deltaTime);
+            else 
+                transform.Translate(-transform.right * speed * Time.deltaTime);
+        }
+        if (Math.Abs(this.transform.position.x - this.target.position.x) < 0.5)
+            Destroy(gameObject);
     }
 
-    public void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        
-        if (hit.gameObject.CompareTag("WayPoint"))
-        {
-            Debug.Log("Colision con waypoint");
-            target = hit.gameObject.GetComponent<WayPoint>().nextWayPoint;
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.tag == "WayPoint"){
+            target = other.gameObject.GetComponent<WayPoint>().nextWayPoint;
+            Debug.Log(target);
         }
     }
+
 }
