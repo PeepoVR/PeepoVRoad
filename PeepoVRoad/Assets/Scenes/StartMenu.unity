@@ -1304,9 +1304,9 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1389,10 +1389,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f9c10c0fd6db6a48af2fe394127a420, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f14f8e706a2fea4f92dc4f9fc5c7975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSpeed: 100
+  lookSpeed: 1000
+  playerBody: {fileID: 733841126}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2420,7 +2421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2927096385816887540, guid: f86a63ba42a29d548aa4414f6eda6fa2, type: 3}
       propertyPath: sounds.Array.data[9].volume
-      value: 0.02
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2981562215569793449, guid: f86a63ba42a29d548aa4414f6eda6fa2, type: 3}
       propertyPath: m_Name

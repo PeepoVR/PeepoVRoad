@@ -7,7 +7,10 @@ public class Coche : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioManager>().SetSource("carSound", GetComponent<AudioSource>());
-        FindObjectOfType<AudioManager>().Play("carSound");
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        if (audioManager != null) {
+            audioManager.SetSource("carSound", GetComponent<AudioSource>());
+            audioManager.Play("carSound");
+        }
     }
 }

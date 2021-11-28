@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class DestruirObjetos : MonoBehaviour
 {
-     void OnCollisionEnter(Collision collision){
-       
-        if (collision.gameObject.tag == "coche"){
-           Destroy(collision.gameObject);
-           
-        }
-    }
-
     void OnTriggerEnter(Collider other){
-        if (other.gameObject.tag == "Floor"){
+        if (other.gameObject.tag == "coche"){
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "Floor"){
            Destroy(other.gameObject);
         }
     }

@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WayPointCharacter : MonoBehaviour
 {
     public Transform target;
-    public CharacterController controller;
     public float speed = 1.0f;
     // Start is called before the first frame update
     private Vector3 velocity;
@@ -34,6 +34,8 @@ public class WayPointCharacter : MonoBehaviour
             else 
                 transform.Translate(-transform.right * speed * Time.deltaTime);
         }
+        if (Math.Abs(this.transform.position.x - this.target.position.x) < 0.5)
+            Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider other){
