@@ -82,19 +82,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: squirrel_1
     clip: {fileID: 8300000, guid: 606cd87c53e4c124a97ad7a70fb8a905, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: squirrel_2
     clip: {fileID: 8300000, guid: a6d27effd30c0e74bbb3fe2fd8aa3b1a, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: song
     clip: {fileID: 8300000, guid: 2a89f54cb7ff747429e9e9245c89eb04, type: 3}
-    volume: 0.3
+    volume: 0.25
     pitch: 1
     loop: 1
     source: {fileID: 0}
