@@ -3,24 +3,21 @@ using System.Collections;
 
 public class Clouds : MonoBehaviour {
 
-    Vector3 m;
+    public int cloudsSpeed = 5;
+    public int cloudsMoveRange = 150;
+    
+    private Vector3 initialPosition;
 
     void Start() {
-       // m  = new Vector3(-26, transform.position.y , transform.position.z);
+       this.initialPosition  = this.transform.position;
     }
 
     // Update is called once per frame
     void Update() {
         //Translates the cloud to the right at the speed that is selected
-        transform.Translate(5 * Time.deltaTime, 0, 0);
-    }
-
-     public void OnTriggerEnter (Collider hit) {
+        transform.Translate(this.cloudsSpeed * Time.deltaTime, 0, 0);
         
-        if (hit.gameObject.CompareTag("Resistance"))
-        {
-            Debug.Log("Colision con waypoint");
-            transform.position = new Vector3(95, transform.position.y , transform.position.z);
-        }
+        if (this.cloudsMoveRange - this.transform.position.x < 0.5)
+            this.transform.position = new Vector3(-this.cloudsMoveRange, this.initialPosition.y, this.initialPosition.z);
     }
 }
