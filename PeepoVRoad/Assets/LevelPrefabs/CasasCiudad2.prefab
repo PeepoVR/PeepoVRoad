@@ -2752,7 +2752,7 @@ GameObject:
   - component: {fileID: 95924297224954667}
   m_Layer: 0
   m_Name: Box963
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7091,7 +7091,7 @@ GameObject:
   - component: {fileID: 2554539862482121991}
   m_Layer: 0
   m_Name: Box963
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
