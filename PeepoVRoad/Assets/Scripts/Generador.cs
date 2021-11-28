@@ -15,8 +15,10 @@ public class Generador : MonoBehaviour
 
 
     void spawn(){
-        Instantiate(objetoGenerado, position.position, position.rotation);
+        GameObject go = Instantiate(objetoGenerado, position.position, position.rotation);
         int repeatRate = Random.Range(2,range);
+        if (go.tag == "Untagged")
+            go.tag = "coche";
         Invoke("spawn", repeatRate);
        // Debug.Log(repeatRate);
     }
