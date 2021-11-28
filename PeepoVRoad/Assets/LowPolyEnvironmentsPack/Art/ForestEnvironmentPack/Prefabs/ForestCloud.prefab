@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 512984537673323772}
   - component: {fileID: 6062678336516302853}
   - component: {fileID: 9190028281068941793}
+  - component: {fileID: 1730975358563478197}
   m_Layer: 0
   m_Name: ForestCloud
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &9190028281068941793
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -94,3 +97,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7545762965820161845, guid: f47b15140d3dc6d4cafa042d753ddf65, type: 3}
+--- !u!114 &1730975358563478197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5484860840862588121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328b6616ac824914fa5208f4eb706ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudsSpeed: 5
+  cloudsMoveRange: 150

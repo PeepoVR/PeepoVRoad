@@ -40,7 +40,6 @@ public class WayPointCharacter : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if (other.gameObject.tag == "WayPoint"){
-            Debug.Log("Colision con waypoint");
             target = other.gameObject.GetComponent<WayPoint>().nextWayPoint;
             Debug.Log(target);
         }
