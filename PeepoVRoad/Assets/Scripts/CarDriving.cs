@@ -4,29 +4,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CarDriving : MonoBehaviour {
-	public interface SpeedControls {
+	public abstract class SpeedControls {
 		
-		public float Throttle {get;}
-		public float Brake {get;}
+		public float Throttle {get; protected set;} = 0;
+		public float Brake {get; protected set;} = 0;
 		
-		public void UpdateCurrentSpeedInput();
+		public abstract void UpdateCurrentSpeedInput();
+		
+		public bool throttleActive() {
+			return this.Throttle != 0;
+		}
+		
+		public bool brakeActive() {
+			return this.Brake != 0;
+		}
 	}
 	
 	private class KeyboardControls : SpeedControls {
-		public float Throttle {get;set;} = 0;
-		public float Brake {get;set;} = 0;
 		
-		public void UpdateCurrentSpeedInput() {
+		public override void UpdateCurrentSpeedInput() {
 			this.Throttle = Input.GetAxis("Throttle");
 			this.Brake = Input.GetAxis("Brake");
 		}
 	}
 	
 	private class GanmePadControls : SpeedControls {
-		public float Throttle {get;set;} = 0;
-		public float Brake {get;set;} = 0;
 		
-		public void UpdateCurrentSpeedInput() {
+		public override void UpdateCurrentSpeedInput() {
 			this.Throttle = (Input.GetAxis("GamePadThrottle") + 1) / 2;
 			this.Brake = (Input.GetAxis("GamePadBrake") + 1) / 2;
 		}
@@ -57,6 +61,14 @@ public class CarDriving : MonoBehaviour {
 		}
 	}
 	
+	[System.Serializable]
+	public struct AudioConfig {
+		public AudioClip clip;
+		
+		[Range(0, 1)]
+		public float volume;
+	}
+	
 	private AcceletarionConfig throttleAccels;
 	private AcceletarionConfig brakeAccels;
 	private AcceletarionConfig reverseAccels;
@@ -70,11 +82,19 @@ public class CarDriving : MonoBehaviour {
 	public Transform steeringWheel;
 	public int maxSteeringWheetRot_visual = 80;
 	
+	public AudioConfig engineAudio;
+	public AudioConfig throttleAudio;
+	public AudioConfig brakeAudio;
+	
+	private AudioSource audioSource;
 	private float shaftsDist;
 	private SpeedControls speedControls;
 	private float speed = 0;
 	
 	void Start() {
+		this.audioSource = GetComponent<AudioSource>();
+		setAudioClip(this.engineAudio);
+		
 		bool connectedController = Input.GetJoystickNames().Length != 0 && Input.GetJoystickNames()[0].Length != 0;
 		this.speedControls = connectedController ? (SpeedControls) new GanmePadControls() : (SpeedControls) new KeyboardControls();
 		this.shaftsDist = Vector2.Distance(vector3to2D(this.frontShaft.position), vector3to2D(transform.position));
@@ -114,7 +134,7 @@ public class CarDriving : MonoBehaviour {
 		float targetSpeed = Math.Max(this.maxSpeed, this.reverseMaxSpeed);
 		AcceletarionConfig accelConfig = null;
 		
-		if (this.speedControls.Brake != 0) {
+		if (this.speedControls.brakeActive()) {
 			accelMultiplier = -this.speedControls.Brake;
 			
 			if (this.speed > 0)
@@ -126,7 +146,7 @@ public class CarDriving : MonoBehaviour {
 			}
 		}
 		
-		else if (this.speedControls.Throttle != 0) {
+		else if (this.speedControls.throttleActive()) {
 			accelMultiplier = this.speedControls.Throttle;
 			
 			if (this.speed > 0) {
@@ -159,6 +179,18 @@ public class CarDriving : MonoBehaviour {
 		if (this.steeringWheel != null) {
 			Vector3 rot = this.steeringWheel.localEulerAngles;
 			this.steeringWheel.localEulerAngles = new Vector3(rot.x, rot.y, Input.GetAxis("Horizontal") * this.maxSteeringWheetRot_visual);
+		}
+		
+		int clipNum = this.speedControls.brakeActive() ? 2 : (this.speedControls.throttleActive() ? 1 : 0);
+		setAudioClip(clipNum == 0 ? this.engineAudio :
+			((clipNum == 1) == this.speed > 0 ? this.throttleAudio : this.brakeAudio));
+	}
+	
+	private void setAudioClip(AudioConfig audio) {
+		if (audio.clip != this.audioSource.clip) {
+			this.audioSource.clip = audio.clip;
+			this.audioSource.volume = audio.volume;
+			this.audioSource.Play();
 		}
 	}
 }
