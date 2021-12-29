@@ -255,7 +255,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3583434286562868193}
   - component: {fileID: 417240056978556140}
-  - component: {fileID: 6974597294426691394}
   m_Layer: 0
   m_Name: RightRearViewCamera
   m_TagString: Untagged
@@ -320,14 +319,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6974597294426691394
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773531330525935047}
-  m_Enabled: 1
 --- !u!1 &785484630611909363
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +410,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6449095982895240138}
   - component: {fileID: 3008396779018870930}
-  - component: {fileID: 5428118909667383040}
   m_Layer: 0
   m_Name: CentralRearViewCamera
   m_TagString: Untagged
@@ -484,14 +474,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5428118909667383040
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036145566948525669}
-  m_Enabled: 1
 --- !u!1 &1315989241331328383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,6 +1578,7 @@ MonoBehaviour:
   frontShaft: {fileID: 4986836278023891058}
   maxTurnDegrees: 15
   maxSpeed: 30
+  reverseMaxSpeed: 12
   steeringWheel: {fileID: 7921672684828813034}
   maxSteeringWheetRot_visual: 80
 --- !u!54 &2481565605449523624
@@ -1788,7 +1771,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6499376025828473073}
   - component: {fileID: 8788221598744258225}
-  - component: {fileID: 2380835991152704728}
   m_Layer: 0
   m_Name: LeftRearViewCamera
   m_TagString: Untagged
@@ -1853,14 +1835,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2380835991152704728
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6402432974562742051}
-  m_Enabled: 1
 --- !u!1 &6403549673121757957
 GameObject:
   m_ObjectHideFlags: 0
