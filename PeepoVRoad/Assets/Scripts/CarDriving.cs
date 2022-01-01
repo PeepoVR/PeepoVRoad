@@ -28,11 +28,19 @@ public class CarDriving : MonoBehaviour {
 		}
 	}
 	
-	private class GanmePadControls : SpeedControls {
+	private class GamePadControls : SpeedControls {
 		
 		public override void UpdateCurrentSpeedInput() {
 			this.Throttle = (Input.GetAxis("GamePadThrottle") + 1) / 2;
 			this.Brake = (Input.GetAxis("GamePadBrake") + 1) / 2;
+		}
+	}
+	
+	private class GamePadControlsAndroid : SpeedControls {
+		
+		public override void UpdateCurrentSpeedInput() {
+			this.Throttle = Input.GetAxis("GamePadAndroidThrottle");
+			this.Brake = Input.GetAxis("GamePadAndroidBrake");
 		}
 	}
 	
@@ -95,8 +103,13 @@ public class CarDriving : MonoBehaviour {
 		this.audioSource = GetComponent<AudioSource>();
 		setAudioClip(this.engineAudio);
 		
-		bool connectedController = Input.GetJoystickNames().Length != 0 && Input.GetJoystickNames()[0].Length != 0;
-		this.speedControls = connectedController ? (SpeedControls) new GanmePadControls() : (SpeedControls) new KeyboardControls();
+		if (Application.platform == RuntimePlatform.Android)
+			this.speedControls = new GamePadControlsAndroid();
+		
+		else {
+			bool connectedController = Input.GetJoystickNames().Length != 0 && Input.GetJoystickNames()[0].Length != 0;
+			this.speedControls = connectedController ? (SpeedControls) new GamePadControls() : (SpeedControls) new KeyboardControls();
+		}
 		this.shaftsDist = Vector2.Distance(vector3to2D(this.frontShaft.position), vector3to2D(transform.position));
 		
 		this.throttleAccels = new AcceletarionConfig(new float[4, 2] {
