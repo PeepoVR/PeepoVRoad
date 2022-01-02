@@ -9,6 +9,7 @@ TagManager:
   - coche
   - pared
   - barca
+  - moneda
   layers:
   - Default
   - TransparentFX
