@@ -9,6 +9,7 @@ TagManager:
   - coche
   - pared
   - barca
+  - Peepo
   layers:
   - Default
   - TransparentFX

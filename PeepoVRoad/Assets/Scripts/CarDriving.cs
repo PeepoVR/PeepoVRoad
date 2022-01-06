@@ -184,7 +184,10 @@ public class CarDriving : MonoBehaviour {
 	}
 	
 	void OnCollisionStay(Collision collision) {
-		if (! collision.gameObject.CompareTag("Floor"))
+		if (collision.gameObject.CompareTag("Peepo"))
+			collision.gameObject.GetComponent<Peepo>().RunOver(Math.Abs(this.speed), this.speed < 0 ? -this.transform.forward : this.transform.forward);
+		
+		else if (! collision.gameObject.CompareTag("Floor"))
 			this.speed = Math.Min(this.speed, 1);
 	}
 	
