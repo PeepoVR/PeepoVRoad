@@ -21,7 +21,7 @@ public class Coins : MonoBehaviour
             audioSource.Play();
             ContadorMonedas.contadorMonedas++;
             
-            GetComponent<MeshCollider>().enabled = false;
+            GetComponent<SphereCollider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
             Destroy(gameObject, 2);
 
