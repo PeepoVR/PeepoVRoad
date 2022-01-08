@@ -24,6 +24,7 @@ public class Peepo : MonoBehaviour {
 	public float gorrocoptero = 0;
 	
 	public float walkSpeed;
+	public float maxStopTime = 0;
 	public Transform[] targets;
 	private IEnumerator<Transform> targetIter;
 	private Vector3 targetPos;
@@ -42,14 +43,13 @@ public class Peepo : MonoBehaviour {
 		
 		this.anim.SetFloat("Walk", targets.Length == 0 ? 0 : 1);
 		
-		if (targets.Length == 0)
-			this.updatePosFunc = () => {};
+		this.updatePosFunc = () => {};
 		
-		else {
-			this.anim.speed = this.walkSpeed * 1.5f;
-			this.updatePosFunc = UpdatePosWalk;
+		if (targets.Length != 0) {
 			this.targetIter = ((IEnumerable<Transform>) this.targets).GetEnumerator();
-			NextTarget();
+			
+			SetWalkAninSpeed(0);
+			StartCoroutine(NextTarget());
 		}
 	}
 	
@@ -59,19 +59,30 @@ public class Peepo : MonoBehaviour {
 	
 	private void UpdatePosWalk() {
 		if (Vector3.Distance(transform.position, this.targetPos) < 0.1) {
-			NextTarget();
-			transform.rotation = Quaternion.LookRotation(this.targetPos - transform.position);
+			this.updatePosFunc = () => {};
+			SetWalkAninSpeed(0);
+			StartCoroutine(NextTarget());
 		}
 		transform.position += (this.targetPos - transform.position).normalized * this.walkSpeed * Time.deltaTime;
 	}
 	
-	private void NextTarget() {
+	private IEnumerator NextTarget() {
 		if (! this.targetIter.MoveNext()) {
 			this.targetIter.Reset();
 			this.targetIter.MoveNext();
 		}
 		this.targetPos = this.targetIter.Current.transform.position;
 		this.targetPos.y = transform.position.y;
+		transform.rotation = Quaternion.LookRotation(this.targetPos - transform.position);
+		
+		yield return new WaitForSeconds(UnityEngine.Random.Range(0, this.maxStopTime));
+		
+		SetWalkAninSpeed(this.walkSpeed);
+		this.updatePosFunc = this.UpdatePosWalk;
+	}
+	
+	private void SetWalkAninSpeed(float newSpeed) {
+		this.anim.speed = newSpeed * 1.5f;
 	}
 	
 	public void RunOver(float carSpeed, Vector3 carDirection) {
