@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public AudioSource audioSource;
+    private AudioSource audioSource;
     public float rotSpeed = 0.5f;
 
     void Start () {
@@ -20,7 +20,10 @@ public class Coins : MonoBehaviour
         if (collision.gameObject.tag == "Player"){
             audioSource.Play();
             ContadorMonedas.contadorMonedas++;
-            Destroy(gameObject);
+            
+            GetComponent<MeshCollider>().enabled = false;
+            GetComponent<MeshRenderer>().enabled = false;
+            Destroy(gameObject, 2);
 
         }
     }
