@@ -224,6 +224,7 @@ MonoBehaviour:
   sit: 0
   gorrocoptero: 1
   walkSpeed: 1.5
+  maxStopTime: 0
   targets: []
 --- !u!1 &959102921612243057
 GameObject:
@@ -1137,7 +1138,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 3359138182758997695, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
   m_Bones:

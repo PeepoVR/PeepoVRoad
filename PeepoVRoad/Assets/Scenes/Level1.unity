@@ -6357,6 +6357,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 578128184}
+--- !u!65 &2632419281571184614
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632419281571184612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.79, z: 0}
 --- !u!4 &2633314884835132682
 Transform:
   m_ObjectHideFlags: 0
@@ -7762,6 +7775,7 @@ MonoBehaviour:
   sit: 0
   gorrocoptero: 0
   walkSpeed: 1.5
+  maxStopTime: 0
   targets: []
 --- !u!1 &6107102744012785510
 GameObject:
@@ -7776,6 +7790,7 @@ GameObject:
   - component: {fileID: 6107102744012785508}
   - component: {fileID: 6107102744012785509}
   - component: {fileID: 6107102744012785511}
+  - component: {fileID: 6107102744012785512}
   m_Layer: 0
   m_Name: PeepoBasado
   m_TagString: Peepo
@@ -7796,6 +7811,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 646886739}
+--- !u!65 &6107102744012785512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107102744012785510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!4 &6135171425976797799
 Transform:
   m_ObjectHideFlags: 0
@@ -8540,7 +8568,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 3359138182758997695, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
   m_Bones:
