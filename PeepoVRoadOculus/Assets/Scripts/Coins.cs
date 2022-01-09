@@ -5,28 +5,23 @@ using UnityEngine;
 public class Coins : MonoBehaviour
 {
     public OVRGrabbable grab;   
-    float timer;
-    public int contador;
+    private AudioSource audioSource;
+    public float rotSpeed = 0.5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-            timer = 0;
-            contador = 0;
+    void Start () {
+        audioSource = GetComponent<AudioSource>();
     }
+    
+    public void Update() {
+        transform.Rotate(0, 360 * this.rotSpeed * Time.deltaTime, 0);
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(grab.isGrabbed && gameObject.CompareTag("Coin")){
-            timer += Time.deltaTime;
-            if (timer > 3.0f)
-             {
-                Destroy(gameObject);
-                timer = 0;
-                contador++;
-             }
+        if(grab.isGrabbed && gameObject.CompareTag("moneda")){
+            audioSource.Play();
+            ContadorMonedas.contadorMonedas++;
+            this.rotSpeed = 0;
+            GetComponent<SphereCollider>().enabled = false;
+            GetComponent<MeshRenderer>().enabled = false;
+            Destroy(gameObject, 2);
         } 
     }
-
 }

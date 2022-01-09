@@ -8,102 +8,102 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: AntennaMat
-    second: {fileID: 2100000, guid: 330dedf46eeea3444a3cfddfdc2678c6, type: 2}
+    second: {fileID: 2100000, guid: 2eee058ad1f46414ab8bc099da66c84f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BumperMat
-    second: {fileID: 2100000, guid: d35317ed2fa44b744842bcb145b6b5e5, type: 2}
+    second: {fileID: 2100000, guid: 19b16d63d2dc4da499ad63efe8841845, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CarDoorHandleMat
-    second: {fileID: 2100000, guid: c9ff139a6881c0f41bde1474219094f4, type: 2}
+    second: {fileID: 2100000, guid: 5af32d965db75704d89149c3c2d408ff, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CarMat
-    second: {fileID: 2100000, guid: 35a2eea95e48afa47a73375286a74587, type: 2}
+    second: {fileID: 2100000, guid: 43813584087ec8e45854a07720af7bb6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CentralRearViewMat
-    second: {fileID: 2100000, guid: fe5c93d52febee84bb4e2d49f4cc3886, type: 2}
+    second: {fileID: 2100000, guid: d462ff4a7344cc3489776c55bdfa6f6a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DashboardMat
-    second: {fileID: 2100000, guid: 81186e220d956294ea6d8247488579b3, type: 2}
+    second: {fileID: 2100000, guid: 9fca2cba91575614b9e6bc15f389ea98, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DrivingSchoolBannerMat
-    second: {fileID: 2100000, guid: c5ba3eb3f3f88914caa04ec8dcf4f181, type: 2}
+    second: {fileID: 2100000, guid: ba4bd9e89884ed94b9cb11714baca6a1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GearLevermat
-    second: {fileID: 2100000, guid: 27752d8941d29474d85c63e91679a3e7, type: 2}
+    second: {fileID: 2100000, guid: ad250b9f79726b3488207c37cffb276d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: LightMat
-    second: {fileID: 2100000, guid: 5b97bf216b8d4274aa81ffb36b8990e6, type: 2}
+    second: {fileID: 2100000, guid: 0650eee0c284c9d4fb74a8f85d4c44c1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MetalicSeatsMat
-    second: {fileID: 2100000, guid: b513601eb726d1845815f1dd667bd980, type: 2}
+    second: {fileID: 2100000, guid: c78f17f5b80652e41bd6e6382dc66868, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PeepoLogoMat
-    second: {fileID: 2100000, guid: c7fc7764ab6633543b08988b0c502bf6, type: 2}
+    second: {fileID: 2100000, guid: 1c69d3f1eb8867c4899b4d869771307b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PlateMat
-    second: {fileID: 2100000, guid: 8bfc890eaf90a99499187afca8c9c282, type: 2}
+    second: {fileID: 2100000, guid: df2a73cd2db19cc43ab3ee29c7c86976, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: RearViewGlassMat
-    second: {fileID: 2100000, guid: 3a5f7afc80137864e8bd44148423a964, type: 2}
+    second: {fileID: 2100000, guid: 1dd0e200e199e9f40bdcfac7519ce5f4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: RearViewMat
-    second: {fileID: 2100000, guid: bc64fd6d57cd1404b83f6d7abb4dc06a, type: 2}
+    second: {fileID: 2100000, guid: bbb081eabe432ca43ae410b677c0039d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SeatsMat
-    second: {fileID: 2100000, guid: 50f5de2877cbf934aa17b8fe72a8f4b7, type: 2}
+    second: {fileID: 2100000, guid: 5402c5bbfcc57284d8d9f256480b62da, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SteeringWheelMat
-    second: {fileID: 2100000, guid: f97bbb35a93379b4da5e6a25547a34f6, type: 2}
+    second: {fileID: 2100000, guid: 17226647a9c72b0449b0d5ce6a2490f6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SteeringWhelBracketMat
-    second: {fileID: 2100000, guid: f7d041a0c656fdd4ab05600b12467641, type: 2}
+    second: {fileID: 2100000, guid: 0971a37cd05369a48a7e78ca63adb28c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WheelMat
-    second: {fileID: 2100000, guid: 9aa624cc505f2b3479e549a269867555, type: 2}
+    second: {fileID: 2100000, guid: b5a82c298c18f8f4984fd606a7e52e9d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WheelRubberMat
-    second: {fileID: 2100000, guid: 084bb90a1d4ddd94991acef60da53f44, type: 2}
+    second: {fileID: 2100000, guid: fdba12a6508265b4691a26c45be749d4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WindowCarMat
-    second: {fileID: 2100000, guid: b417d580569bc204680efdd91096ac18, type: 2}
+    second: {fileID: 2100000, guid: cbbf976c30d17a44998530a511021822, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
