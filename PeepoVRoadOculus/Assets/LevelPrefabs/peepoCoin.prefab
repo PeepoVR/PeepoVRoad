@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4836660657514903401}
   - component: {fileID: 3709393876278063392}
   - component: {fileID: 370039486731779154}
-  - component: {fileID: 2988586987333168987}
   - component: {fileID: 6359998608110000745}
+  - component: {fileID: 2988586987333168987}
   - component: {fileID: 8001130259182839716}
   m_Layer: 0
   m_Name: peepoCoin
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4759dd274a5ad4c8ff7edb6ba3e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grab: {fileID: 0}
+  grab: {fileID: 6359998608110000745}
   rotSpeed: 0.5
 --- !u!114 &3709393876278063392
 MonoBehaviour:
@@ -126,6 +126,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.011
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6359998608110000745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454829583423017596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!82 &2988586987333168987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -222,23 +239,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6359998608110000745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454829583423017596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!54 &8001130259182839716
 Rigidbody:
   m_ObjectHideFlags: 0

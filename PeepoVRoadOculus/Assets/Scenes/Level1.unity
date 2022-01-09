@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.46169513, g: 0.5124164, b: 0.58993304, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2230,6 +2230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3697,7 +3701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc4b85a40297df43bf5223ad4ed800c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gazeInputObject: {fileID: 0}
   panel: {fileID: 1745172442}
   texto: {fileID: 1937262128}
 --- !u!114 &1829704199
@@ -4999,8 +5002,6 @@ GameObject:
   - component: {fileID: 3911008735496615351}
   - component: {fileID: 1270656045012304253}
   - component: {fileID: 766379949350641836}
-  - component: {fileID: 766379949350641835}
-  - component: {fileID: 766379949350641834}
   - component: {fileID: 766379949350641837}
   m_Layer: 0
   m_Name: peepoCar
@@ -5044,63 +5045,6 @@ RectTransform:
   m_AnchoredPosition: {x: -69.041466, y: 420.26917}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &766379949350641834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766379949350641832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: GazeInput, Assembly-CSharp
-          m_MethodName: setIsLooked
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: GazeInput, Assembly-CSharp
-          m_MethodName: setIsLooked
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &766379949350641835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766379949350641832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &766379949350641836
 Canvas:
   m_ObjectHideFlags: 0
@@ -5909,6 +5853,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272782714955163672, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_TagString
+      value: coche
+      objectReference: {fileID: 0}
+    - target: {fileID: 272782715831599586, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
+      propertyPath: m_TagString
+      value: coche
+      objectReference: {fileID: 0}
     - target: {fileID: 560785779405225602, guid: 1cf6b4ce3c273dc4690283fa8c1b06a7, type: 3}
       propertyPath: m_TagString
       value: barca

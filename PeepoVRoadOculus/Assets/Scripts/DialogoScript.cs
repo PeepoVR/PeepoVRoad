@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class DialogoScript : MonoBehaviour
 {
-    public GameObject gazeInputObject;
     public GameObject panel;
     public TextMeshPro texto;
 
@@ -17,10 +16,8 @@ public class DialogoScript : MonoBehaviour
             panel.SetActive(true);
             if(ContadorMonedas.contadorMonedas >= monedasNecesarias){
                 texto.SetText("Veo que tienes las peepoCoins, entra al coche chaval.");
-                gazeInputObject.GetComponent<GazeInput>().enabled=true;
             }else{
                 texto.SetText("Te faltan "+ (monedasNecesarias-ContadorMonedas.contadorMonedas) +" peepoCoins, estas cuajado niño, sin mi dinero no trabajo.");
-                gazeInputObject.GetComponent<GazeInput>().enabled=false;
             }
 
             StartCoroutine(ExampleCoroutine());
