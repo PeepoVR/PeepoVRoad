@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ContadorMonedas : MonoBehaviour
+
+public class LoadScene : MonoBehaviour
 {
-    static public int contadorMonedas;
     // Start is called before the first frame update
     void Start()
     {
-        contadorMonedas = 0;
+        SceneManager.LoadSceneAsync("Level2");
+
     }
 
     // Update is called once per frame

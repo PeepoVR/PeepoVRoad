@@ -8,6 +8,6 @@ public class CocheFin : MonoBehaviour
      private void OnTriggerEnter(Collider colideObj)
     {
         if (ContadorMonedas.contadorMonedas >= 5)
-            SceneManager.LoadSceneAsync("Level2");
+            SceneManager.LoadScene("Loading");
     }
 }
