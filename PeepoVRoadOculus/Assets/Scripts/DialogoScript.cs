@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DialogoScript : MonoBehaviour
 {
-
     public GameObject panel;
+    public TextMeshPro texto;
 
-    public float tiempoEntrada;
-
+    private int monedasNecesarias = 5;
     private void OnTriggerEnter(Collider colideObj)
     {
         if (colideObj.gameObject.CompareTag("Player"))
         {
-          
             panel.SetActive(true);
+            if(ContadorMonedas.contadorMonedas >= monedasNecesarias){
+                texto.SetText("Veo que tienes las peepoCoins, entra al coche chaval.");
+            }else{
+                texto.SetText("Te faltan "+ (monedasNecesarias-ContadorMonedas.contadorMonedas) +" peepoCoins, estas cuajado niño, sin mi dinero no trabajo.");
+            }
+
             StartCoroutine(ExampleCoroutine());
 
         }
@@ -35,7 +40,7 @@ public class DialogoScript : MonoBehaviour
         
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0);
 
    
     }

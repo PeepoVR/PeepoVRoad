@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2942149035011065699}
   - component: {fileID: 1094493166360802217}
   - component: {fileID: 4836660657514903401}
-  - component: {fileID: 6726943061903977238}
   - component: {fileID: 3709393876278063392}
+  - component: {fileID: 370039486731779154}
   - component: {fileID: 2988586987333168987}
   m_Layer: 0
   m_Name: peepoCoin
@@ -97,21 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4759dd274a5ad4c8ff7edb6ba3e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
---- !u!64 &6726943061903977238
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454829583423017596}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 191464996659413966, guid: 35b4a2fb581ac72408dfc3f24b08eeb7, type: 3}
+  rotSpeed: 0.5
 --- !u!114 &3709393876278063392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2826136f5a246764f956d4bc5d4ee15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &370039486731779154
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454829583423017596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.011
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &2988586987333168987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -134,9 +133,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8e4e5818ce1728c44ba60c0fbba826b2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -15,7 +15,7 @@ public class DialogoScript : MonoBehaviour
         if (colideObj.gameObject.CompareTag("Player"))
         {
             panel.SetActive(true);
-            if(ContadorMonedas.contadorMonedas == monedasNecesarias){
+            if(ContadorMonedas.contadorMonedas >= monedasNecesarias){
                 texto.SetText("Veo que tienes las peepoCoins, entra al coche chaval.");
                 gazeInputObject.GetComponent<GazeInput>().enabled=true;
             }else{
