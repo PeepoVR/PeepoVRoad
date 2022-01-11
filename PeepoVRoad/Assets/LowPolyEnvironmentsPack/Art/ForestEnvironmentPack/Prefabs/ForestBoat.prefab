@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8224755430480827198}
   - component: {fileID: 1116670347744733448}
   - component: {fileID: 6648364907291121137}
-  - component: {fileID: 1604844165912558025}
+  - component: {fileID: 9169979622659860770}
+  - component: {fileID: 3007964057623163113}
   m_Layer: 0
   m_Name: ForestBoat
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,8 +82,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1604844165912558025
-MeshCollider:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9169979622659860770
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +93,19 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8457778451860567547, guid: c6cd3bb8e59124a4da6e0c65990208a8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.5613029, y: 0.08, z: 0.26348853}
+  m_Center: {x: -0.0160321, y: 0.054476857, z: 0}
+--- !u!65 &3007964057623163113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4935780969930072365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5613029, y: 0.17, z: 0.26348853}
+  m_Center: {x: -0.0160321, y: 0.054476857, z: 0}

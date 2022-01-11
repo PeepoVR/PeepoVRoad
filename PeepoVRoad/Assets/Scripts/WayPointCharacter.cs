@@ -9,6 +9,8 @@ public class WayPointCharacter : MonoBehaviour
     public float speed = 1.0f;
     // Start is called before the first frame update
     private Vector3 velocity;
+    
+    private CharacterController player = null;
   
     void Start()
     {
@@ -29,10 +31,11 @@ public class WayPointCharacter : MonoBehaviour
         }
 
         else if(gameObject.tag == "Floor"){
-             if (relativePos.x >= 0)
-                transform.Translate(transform.right * speed * Time.deltaTime);
-            else 
-                transform.Translate(-transform.right * speed * Time.deltaTime);
+            Vector3 moveVector = (relativePos.x >= 0 ? transform.right : -transform.right) * speed * Time.deltaTime;
+            transform.Translate(moveVector);
+            
+            if (this.player != null)
+                this.player.Move(transform.rotation * moveVector);
         }
         if (Math.Abs(this.transform.position.x - this.target.position.x) < 0.5)
             Destroy(gameObject);
@@ -43,6 +46,13 @@ public class WayPointCharacter : MonoBehaviour
             target = other.gameObject.GetComponent<WayPoint>().nextWayPoint;
             Debug.Log(target);
         }
+        
+        else if (other.gameObject.CompareTag("Player"))
+            this.player = other.gameObject.GetComponent<CharacterController>();
     }
-
+    
+    void OnTriggerExit(Collider other) {
+        if (other.gameObject.CompareTag("Player"))
+            this.player = null;
+    }
 }

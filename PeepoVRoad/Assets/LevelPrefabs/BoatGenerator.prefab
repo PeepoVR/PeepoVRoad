@@ -93,24 +93,6 @@ MonoBehaviour:
   objetoGenerado: {fileID: 8514077895896511299}
   position: {fileID: 5281202731132435213}
   range: 12
---- !u!143 &8663548882438180805
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8514077895896511299}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.21790859
-  m_Radius: 0.26461935
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1481617625101499110
 MonoBehaviour:
   m_ObjectHideFlags: 0
