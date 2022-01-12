@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarDriving : MonoBehaviour {
 	public abstract class SpeedControls {
@@ -17,6 +18,22 @@ public class CarDriving : MonoBehaviour {
 		
 		public bool brakeActive() {
 			return this.Brake != 0;
+		}
+	}
+	
+	private class DisabledControls : SpeedControls {
+		public override void UpdateCurrentSpeedInput() {}
+	}
+	
+	private class BrakeControls : SpeedControls {
+		private Func<float> getCarSpeed;
+		
+		public BrakeControls(Func<float> getCarSpeed) {
+			this.getCarSpeed = getCarSpeed;
+		}
+		
+		public override void UpdateCurrentSpeedInput() {
+			this.Brake = this.getCarSpeed() > 0.05 ? 1 : 0;
 		}
 	}
 	
@@ -86,6 +103,17 @@ public class CarDriving : MonoBehaviour {
 	public float maxTurnDegrees = 20;
 	public float maxSpeed = 30;
 	public float reverseMaxSpeed = 12;
+	
+	public UserMessage userMessage;
+	[Multiline]
+	public String failExamText;
+	public Color failExamColor;
+	[Multiline]
+	public String passExamText;
+	public Color passExamColor;
+	
+	public int maxRunOverCountToPass = 1;
+	private int runedOverCount = 0;
 	
 	public Transform steeringWheel;
 	public int maxSteeringWheetRot_visual = 80;
@@ -183,9 +211,22 @@ public class CarDriving : MonoBehaviour {
 		return new Vector3(vect.x, vect.z);
 	}
 	
-	void OnCollisionStay(Collision collision) {
-		if (collision.gameObject.CompareTag("Peepo"))
+	public void OnCollisionStay(Collision collision) {
+		if (collision.gameObject.CompareTag("Peepo")) {
 			collision.gameObject.GetComponent<Peepo>().RunOver(Math.Abs(this.speed), this.speed < 0 ? -this.transform.forward : this.transform.forward);
+			
+			if (++this.runedOverCount > this.maxRunOverCountToPass) {
+				this.speedControls = new DisabledControls();
+				this.userMessage.ShowMessage(this.failExamText, this.failExamColor, () => SceneManager.LoadScene("Level2"));
+			}
+		}
+		
+		else if (collision.gameObject.CompareTag("Finish")) {
+			this.speedControls = new BrakeControls(() => this.speed);
+			
+			collision.gameObject.GetComponent<BoxCollider>().enabled = false;
+			this.userMessage.ShowMessage(this.passExamText, this.passExamColor, () => SceneManager.LoadScene("StartMenu"));
+		}
 		
 		else if (! collision.gameObject.CompareTag("Floor"))
 			this.speed = Math.Min(this.speed, 1);
