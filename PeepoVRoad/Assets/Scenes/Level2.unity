@@ -694,6 +694,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6376813438792671988, guid: 74b30dff5c857924295f433875ce9c20, type: 3}
   m_PrefabInstance: {fileID: 9124050225980361875}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1257154853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257154855}
+  - component: {fileID: 1257154854}
+  m_Layer: 0
+  m_Name: PassExamCollider
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1257154854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257154853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 3, z: 22}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1257154855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257154853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -277.31, y: 1.372, z: -32.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1265342208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5693755289194849895, guid: c9c56079fa673be4bab27425be0c9720, type: 3}
