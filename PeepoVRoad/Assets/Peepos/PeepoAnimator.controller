@@ -73,19 +73,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: RunOver
+  - m_Name: RunOverLeft
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: RunOverFlyLeft
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: RunOverFlyRight
+  - m_Name: RunOverRight
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -154,7 +148,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 68aadebd1175bab41a729dd7d30fed24, type: 2}
-    m_Threshold: 0.075
+    m_Threshold: 0.081818186
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -162,7 +156,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 5804ce080e4dfba4a84514481291197f, type: 2}
-    m_Threshold: 0.15
+    m_Threshold: 0.16363637
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -170,7 +164,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: bac91855367929943beb7b5c1c76e20b, type: 2}
-    m_Threshold: 0.225
+    m_Threshold: 0.24545455
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -178,7 +172,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: bac91855367929943beb7b5c1c76e20b, type: 2}
-    m_Threshold: 0.3
+    m_Threshold: 0.32727274
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -186,7 +180,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -8905976034944368887, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
-    m_Threshold: 0.37499997
+    m_Threshold: 0.4090909
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -194,7 +188,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 3399781776008914856, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
-    m_Threshold: 0.45
+    m_Threshold: 0.4909091
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -202,43 +196,35 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 5101709082186216532, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
-    m_Threshold: 0.525
+    m_Threshold: 0.57272726
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Sit
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 3075297450654245935, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
-    m_Threshold: 0.6
+    m_Motion: {fileID: 3256241233684442584, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
+    m_Threshold: 0.6545455
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
-    m_DirectBlendParameter: RunOver
+    m_DirectBlendParameter: RunOverLeft
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -1693338687340991673, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
+    m_Threshold: 0.7363636
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: RunOverRight
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -5853515977739357178, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}
-    m_Threshold: 0.67499995
+    m_Threshold: 0.8181818
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Smoking
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 1fe149820c481a24ab04d7ca752b580a, type: 2}
-    m_Threshold: 0.74999994
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: RunOverFlyLeft
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 2b8867a346a1bf340adb82a2a0451914, type: 2}
-    m_Threshold: 0.825
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: RunOverFlyRight
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: -8546627646231579492, guid: ab8ac7a161697ae4192a124d393f9728, type: 3}

@@ -19,8 +19,11 @@ ModelImporter:
       74: 3399781776008914856
     second: PeepoArmature|PeepoWalk
   - first:
-      74: 3075297450654245935
-    second: PeepoArmature|RunOver
+      74: 3256241233684442584
+    second: PeepoArmature|RunOverLeft
+  - first:
+      74: -1693338687340991673
+    second: PeepoArmature|RunOverRight
   - first:
       74: -8546627646231579492
     second: GorrocopteroArmature|GorrocopteroArmatureAction
@@ -29,57 +32,57 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CigarMat
-    second: {fileID: 2100000, guid: 165604ae54e17374fa737847436818df, type: 2}
+    second: {fileID: 2100000, guid: 6d2b87bf89e90f14e834f7814434dc82, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ClownMat
-    second: {fileID: 2100000, guid: ee324fb6bd4982340adcf3d0af21deb5, type: 2}
+    second: {fileID: 2100000, guid: b2fb88daf9ebce843b96b4d4785ba22c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ClownNoseMat
-    second: {fileID: 2100000, guid: 4c2e648bd8a72d64cb952f9826424064, type: 2}
+    second: {fileID: 2100000, guid: 428ec882fb9afd0448ce9a7dc7ff9f11, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EyesMat
-    second: {fileID: 2100000, guid: fcc04500db0c06048941903f18cfee52, type: 2}
+    second: {fileID: 2100000, guid: 1b9d545bfb987084c99be4ee186b9456, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GorrocopteroHelixBracketMat
-    second: {fileID: 2100000, guid: 67a20f3f0c40ec94a8b34b383a078336, type: 2}
+    second: {fileID: 2100000, guid: 3a59186e8398b1d4f924ef7887d4f9ef, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GorrocopteroHelixMat
-    second: {fileID: 2100000, guid: 9915b92c071ccfc45a48e032c6103300, type: 2}
+    second: {fileID: 2100000, guid: 48b907b69cdcfc24793777614cffc04b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GorrocopteroMat
-    second: {fileID: 2100000, guid: 50724b8ffef6dd9438f49a1e0e3b1739, type: 2}
+    second: {fileID: 2100000, guid: 8b83a365dd164f94484608059f31f4f2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: LipsMat
-    second: {fileID: 2100000, guid: 8aca7a223d67ed04e84e1c2be08d1dae, type: 2}
+    second: {fileID: 2100000, guid: 1986111845c341a448609f641abd5187, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PeepoSkinMat
-    second: {fileID: 2100000, guid: 003079268a514cf4f9cd9fb99f2052dd, type: 2}
+    second: {fileID: 2100000, guid: 96bcb2333013b9242b14946ec3bdf2e2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TShirtMat
-    second: {fileID: 2100000, guid: d8e344a4bbc4c264fbe836724705e117, type: 2}
+    second: {fileID: 2100000, guid: f82ce741c0e1167489f067ae6ad9bc16, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TrousersMat
-    second: {fileID: 2100000, guid: 2d34f82ef8b493947882fd0620d9e530, type: 2}
+    second: {fileID: 2100000, guid: 84d2f0b2e5c1aa34ca560e0fc12048a4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 1
@@ -253,8 +256,37 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: PeepoArmature|RunOver
-      takeName: PeepoArmature|RunOver
+      name: PeepoArmature|RunOverLeft
+      takeName: PeepoArmature|RunOverLeft
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PeepoArmature|RunOverRight
+      takeName: PeepoArmature|RunOverRight
       internalID: 0
       firstFrame: 0
       lastFrame: 19
