@@ -1,10 +1,13 @@
 # PeepoVRoad
 Juego de realidad virtual inspirado en Crossy Road para la asignatura de RAA.
 
-## Demostración
-Puedes encontrar más videos sobre el juego en nuestro canal de YouTube.
+Para empezar a jugar echale un vistazo a los [controles](https://github.com/PeepoVR/PeepoVRoad/wiki#controles).
+Puedes descargar la apk [aqui](https://github.com/PeepoVR/PeepoVRoad/releases).
 
-## Documentación
+## Demostración 🚗
+Puedes encontrar más videos sobre el juego en nuestro canal de [YouTube](https://www.youtube.com/channel/UCfHdZjK-cRDMpdC0-_FpQHQ).
+
+## Documentación 🚘
 Puedes ver toda la info (controles, mecánicas, niveles...) en la [Wiki](https://github.com/PeepoVR/PeepoVRoad/wiki).
 
 ## Nuestro equipo
