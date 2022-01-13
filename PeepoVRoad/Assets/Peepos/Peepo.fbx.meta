@@ -32,57 +32,57 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CigarMat
-    second: {fileID: 2100000, guid: 6d2b87bf89e90f14e834f7814434dc82, type: 2}
+    second: {fileID: 2100000, guid: 153d652094e268946bdd6a82c90825f7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ClownMat
-    second: {fileID: 2100000, guid: b2fb88daf9ebce843b96b4d4785ba22c, type: 2}
+    second: {fileID: 2100000, guid: a874b85870c83874f9376fd45201d89d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ClownNoseMat
-    second: {fileID: 2100000, guid: 428ec882fb9afd0448ce9a7dc7ff9f11, type: 2}
+    second: {fileID: 2100000, guid: d72323dee02024443a8e96f9e39f9b3f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EyesMat
-    second: {fileID: 2100000, guid: 1b9d545bfb987084c99be4ee186b9456, type: 2}
+    second: {fileID: 2100000, guid: ee2eeaf7090c17c4c83ccd67bf96207e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GorrocopteroHelixBracketMat
-    second: {fileID: 2100000, guid: 3a59186e8398b1d4f924ef7887d4f9ef, type: 2}
+    second: {fileID: 2100000, guid: 9239684d4e76ac441bc0490ae91e9192, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GorrocopteroHelixMat
-    second: {fileID: 2100000, guid: 48b907b69cdcfc24793777614cffc04b, type: 2}
+    second: {fileID: 2100000, guid: 7b61ab18ef9885b4f912a44fe93a9424, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GorrocopteroMat
-    second: {fileID: 2100000, guid: 8b83a365dd164f94484608059f31f4f2, type: 2}
+    second: {fileID: 2100000, guid: eb50f2c9e8d30a144ba651832fed7b3b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: LipsMat
-    second: {fileID: 2100000, guid: 1986111845c341a448609f641abd5187, type: 2}
+    second: {fileID: 2100000, guid: 798581e0ce90a7d4886a655e7834a6b2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PeepoSkinMat
-    second: {fileID: 2100000, guid: 96bcb2333013b9242b14946ec3bdf2e2, type: 2}
+    second: {fileID: 2100000, guid: 6b9281d9752be374fa9c9f6305663550, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TShirtMat
-    second: {fileID: 2100000, guid: f82ce741c0e1167489f067ae6ad9bc16, type: 2}
+    second: {fileID: 2100000, guid: 8ab534e63bf0cb64d8f0da8ed717e64e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TrousersMat
-    second: {fileID: 2100000, guid: 84d2f0b2e5c1aa34ca560e0fc12048a4, type: 2}
+    second: {fileID: 2100000, guid: 98490fe9740ad424e8ba3aca7e02f07e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 1
